@@ -1,8 +1,4 @@
-import pandas as pd
-import nba_api
-from nba_api.stats.static import teams
 from nba_api.stats.static import players
-from nba_api.stats import endpoints
 from nba_api.stats.endpoints import PlayerCareerStats
 import numpy as np
 import matplotlib.pyplot as plt
