@@ -10,7 +10,8 @@
 ### Details of the approach:
     
 ### Results:
-    ![image](picture or gif url)
+   ![image](https://github.com/yjc1028/Open-Platform-Software-Final-Exam/blob/main/example(input).png)
+   ![image](https://github.com/yjc1028/Open-Platform-Software-Final-Exam/blob/main/example(LeBron).png)
 ### References:
     nba_api
     numpy
