@@ -10,7 +10,7 @@
 ### Details of the approach:
     
 ### Results:
-    
+    ![image](picture or gif url)
 ### References:
     nba_api
     numpy
