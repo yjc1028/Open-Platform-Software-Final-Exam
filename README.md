@@ -9,7 +9,20 @@
 ### Build process:
     
 ### Details of the approach:
-    
+> First, input which player's data that you want to analyze.
+
+>Second, it would find your input which is match in database.
+
+> Third, compute his career data
+>>PTS
+   
+>>REB     
+         
+>>AST
+
+>>STL
+
+   >>BLK
 ### Results:
    ![image](https://github.com/yjc1028/Open-Platform-Software-Final-Exam/blob/main/example(input).png)
    ![image](https://github.com/yjc1028/Open-Platform-Software-Final-Exam/blob/main/example(LeBron).png)
