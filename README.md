@@ -122,7 +122,11 @@
     for x, y in enumerate(np.array(season_blk)):
         plt.text(x, y, '%s' % y, ha='center')  # 顯示數值
    ```
-   
+  - Output
+    ``` python
+    plt.tight_layout()
+    plt.show()
+    ```
 ### Details of the approach:
 > Input which player's data that you want to analyze.
 > 
