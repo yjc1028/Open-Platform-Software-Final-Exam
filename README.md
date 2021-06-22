@@ -41,7 +41,7 @@
    ```
    - Fix the problem season
    1. If the player was traded in the season, that season would have three data.
-      *(It would use the sum of that season's data and delete the others)*
+      *( It would use the sum of that season's data and delete the others )*
    ``` python
    season = []
     for i in career['SEASON_ID']:
@@ -62,6 +62,67 @@
             del blk[i - 2]
             del blk[i - 1]
    ```
+   - Make chart
+   1. Create list
+   *( List is used by chart )*
+   ``` python
+   season_pts = []
+    for i in pts:
+        season_pts += [i]  # 取出指定球員在聯盟的場均得分
+    season_reb = []
+    for i in reb:
+        season_reb += [i]  # 取出指定球員在聯盟的場均籃板
+    season_ast = []
+    for i in ast:
+        season_ast += [i]  # 取出指定球員在聯盟的場均助攻
+    season_stl = []
+    for i in stl:
+        season_stl += [i]  # 取出指定球員在聯盟的場均抄截
+    season_blk = []
+    for i in blk:
+        season_blk += [i]  # 取出指定球員在聯盟的場均火鍋
+   ```
+   2. Make season points chart
+   ``` python
+    a1 = plt.subplot(511) # 放在指定位置
+    plt.title('POINTS')  # 把長條圖的X軸放入年份Y軸放入得分
+    plt.bar(np.array(season), np.array(season_pts))
+    for x, y in enumerate(np.array(season_pts)):
+        plt.text(x, y, '%s' % y, ha='center')  # 顯示數值
+   ```
+   3. Make season rebounds chart
+   ``` python
+    a2 = plt.subplot(512)
+    plt.title('REBOUNDS')  # 把長條圖的X軸放入年份Y軸放入籃板
+    plt.bar(np.array(season), np.array(season_reb), color='yellow')
+    for x, y in enumerate(np.array(season_reb)):
+        plt.text(x, y, '%s' % y, ha='center')  # 顯示數值
+   ```
+   4. Make season assists chart
+   ``` python
+    a3 = plt.subplot(513)
+    plt.title('ASSISTS')  # 把長條圖的X軸放入年份Y軸放入助攻
+    plt.bar(np.array(season), np.array(season_ast), color='yellow')
+    for x, y in enumerate(np.array(season_ast)):
+        plt.text(x, y, '%s' % y, ha='center')  # 顯示數值
+   ```
+   5. Make season steals chart
+   ``` python
+    a4 = plt.subplot(514)
+    plt.title('STEALS')  # 把長條圖的X軸放入年份Y軸放入抄截
+    plt.bar(np.array(season), np.array(season_stl), color='red')
+    for x, y in enumerate(np.array(season_stl)):
+        plt.text(x, y, '%s' % y, ha='center')  # 顯示數值
+   ```
+   6. Make season blocks chart
+   ``` python
+    a5 = plt.subplot(515)
+    plt.title('BLOCKS')  # 把長條圖的X軸放入年份Y軸放入火鍋
+    plt.bar(np.array(season), np.array(season_blk), color='red')
+    for x, y in enumerate(np.array(season_blk)):
+        plt.text(x, y, '%s' % y, ha='center')  # 顯示數值
+   ```
+   
 ### Details of the approach:
 > Input which player's data that you want to analyze.
 > 
